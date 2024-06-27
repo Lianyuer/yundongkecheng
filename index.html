@@ -7,6 +7,10 @@
     <link rel="icon" type="image/x-ico" href="./logo.png" />
     <style>
       /* 这里可以添加一些基本的CSS样式，例如响应式布局等 */
+
+      a {
+        text-decoration: none;
+      }
       body {
         margin: 0;
         padding: 0;
@@ -77,10 +81,21 @@
     <main>
       <section id="home">
         <h2>运动柯城</h2>
-        <p>
-          《运动柯城》APP --- 浙江衢州柯城人自己的新闻客户端
-          APP，由柯城传媒集团（衢州市柯城区融媒体中心）倾力打造，是集权威资讯、生活服务、互动交流于一体的智慧城市综合服务枢纽平台。一端在手，资讯全有。
-        </p>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p style="width: 300px">
+            《运动柯城》APP --- 浙江衢州柯城人自己的新闻客户端
+            APP，由柯城传媒集团（衢州市柯城区融媒体中心）倾力打造，是集权威资讯、生活服务、互动交流于一体的智慧城市综合服务枢纽平台。一端在手，资讯全有。
+          </p>
+          <div style="width: 30%; border-radius: 15px; overflow: hidden">
+            <img src="./index.jpg" alt="" width="100%" />
+          </div>
+        </div>
       </section>
 
       <section id="products">
@@ -115,12 +130,27 @@
 
       <section id="user-agreement">
         <h2>应用下载</h2>
-        <div style="text-align: center">
+        <!-- <div style="text-align: center">
           <img src="./code.png" alt="" width="116px" />
           <p style="font-size: 14px; margin-top: 5px; color: #8e96a9">
             请用手机扫描二维码下载
           </p>
-        </div>
+        </div> -->
+        <a
+          href="https://vapp.tmuyun.com/client/download.html?tenant_id=29"
+          target="_blank"
+          ><button
+            style="
+              height: 40px;
+              border-radius: 10px;
+              border: none;
+              background-color: lightseagreen;
+              padding: 0 8px;
+            "
+          >
+            点击获取最新版本
+          </button></a
+        >
         <!-- 这里可以添加用户协议的详细内容 -->
       </section>
 
@@ -134,7 +164,7 @@
           </div>
         </div>
         <p>
-          网站备案信息：
+          备案号：
           <a
             href="https://beian.miit.gov.cn/"
             style="text-decoration: none; color: #8e96a9"
