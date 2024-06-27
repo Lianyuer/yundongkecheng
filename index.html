@@ -35,27 +35,58 @@
         padding: 20px;
         margin-top: 50px;
       }
-      /* 右侧固定盒子 */
-      .fixBox {
-        list-style: none;
-        position: fixed;
-        right: 5px;
-      }
-      .fixBox li {
-        height: 30px;
-        line-height: 30px;
-      }
-
-      .fixBox li a {
-        text-decoration: none;
-        font-size: 14px;
-        color: #000;
-      }
       footer {
         padding: 15px 0 10px 0;
         font-size: 14px;
         color: #8e96a9;
         text-align: center;
+      }
+      .info-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .app-info {
+        width: 200px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .img-container {
+          width: 100px;
+          display: none;
+        }
+        main,
+        info-container {
+          text-align: center;
+        }
+        .app-info {
+          width: 300px;
+          margin: 0 auto;
+        }
+        .top {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .top-left-container {
+          margin-right: 100px;
+          height: 490px;
+        }
+        .top-right-container {
+          display: block;
+          width: 200px;
+          margin-right: -300px;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+        .top-right-container img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 667px) {
+        .top-right-container {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -63,96 +94,80 @@
     <header>
       <nav>
         <span>运动柯城</span>
-
-        <!-- 其他导航链接... -->
       </nav>
     </header>
-    <!-- <ul class="fixBox">
-      <li>
-        <a href="#home" class="smooth-scroll">首页</a>
-      </li>
-      <li>
-        <a href="#products" class="smooth-scroll">产品展示</a>
-      </li>
-      <li>
-        <a href="#user-agreement" class="smooth-scroll">用户协议</a>
-      </li>
-    </ul> -->
     <main>
-      <section id="home">
-        <h2>运动柯城</h2>
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          "
-        >
-          <p style="width: 300px">
-            《运动柯城》APP --- 浙江衢州柯城人自己的新闻客户端
-            APP，由柯城传媒集团（衢州市柯城区融媒体中心）倾力打造，是集权威资讯、生活服务、互动交流于一体的智慧城市综合服务枢纽平台。一端在手，资讯全有。
-          </p>
-          <div style="width: 30%; border-radius: 15px; overflow: hidden">
-            <img src="./index.jpg" alt="" width="100%" />
-          </div>
+      <div class="top">
+        <div class="top-left-container">
+          <section id="home">
+            <h2>运动柯城</h2>
+            <div class="info-container">
+              <p class="app-info">
+                《运动柯城》APP --- 浙江衢州柯城人自己的新闻客户端
+                APP，由柯城传媒集团（衢州市柯城区融媒体中心）倾力打造，是集权威资讯、生活服务、互动交流于一体的智慧城市综合服务枢纽平台。一端在手，资讯全有。
+              </p>
+              <div
+                style="width: 30%; border-radius: 15px; overflow: hidden"
+                class="img-container"
+              >
+                <img src="./index.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </section>
+
+          <section id="products">
+            <h2>应用首页</h2>
+            <a
+              href="https://appshare.kecnews.com.cn/webChannels/tabs?tenantId=29&name=运动柯城"
+              style="text-decoration: none"
+              >点击查看应用首页</a
+            >
+          </section>
+
+          <section id="user-agreement">
+            <h2>用户协议</h2>
+            <p>
+              请阅读并遵守我们的
+              <a
+                href="https://vapp.tmuyun.com/client/userAgreement.html?tenant_id=29"
+                style="text-decoration: none"
+                target="_blank"
+                >用户协议</a
+              >
+            </p>
+            <!-- 这里可以添加用户协议的详细内容 -->
+          </section>
+
+          <section id="user-agreement">
+            <h2>应用下载</h2>
+            <!-- <div style="text-align: center">
+              <img src="./code.png" alt="" width="116px" />
+              <p style="font-size: 14px; margin-top: 5px; color: #8e96a9">
+                请用手机扫描二维码下载
+              </p>
+            </div> -->
+            <a
+              href="https://vapp.tmuyun.com/client/download.html?tenant_id=29"
+              target="_blank"
+              ><button
+                style="
+                  height: 40px;
+                  border-radius: 10px;
+                  border: none;
+                  background-color: lightseagreen;
+                  padding: 0 8px;
+                "
+              >
+                点击获取最新版本
+              </button></a
+            >
+            <!-- 这里可以添加用户协议的详细内容 -->
+          </section>
         </div>
-      </section>
-
-      <section id="products">
-        <h2>应用首页</h2>
-        <a
-          href="https://appshare.kecnews.com.cn/webChannels/tabs?tenantId=29&name=运动柯城"
-          style="text-decoration: none"
-          >点击查看应用首页</a
-        >
-        <!-- 这里可以添加产品列表或图片等 -->
-        <!-- <div>
-          <h3>产品1</h3>
-          <p>产品1的详细介绍...</p>
-        </div> -->
-      </section>
-
-      <!-- 其他内容区域，如用户协议、联系方式等 -->
-
-      <section id="user-agreement">
-        <h2>用户协议</h2>
-        <p>
-          请阅读并遵守我们的
-          <a
-            href="https://vapp.tmuyun.com/client/userAgreement.html?tenant_id=29"
-            style="text-decoration: none"
-            target="_blank"
-            >用户协议</a
-          >
-        </p>
-        <!-- 这里可以添加用户协议的详细内容 -->
-      </section>
-
-      <section id="user-agreement">
-        <h2>应用下载</h2>
-        <!-- <div style="text-align: center">
-          <img src="./code.png" alt="" width="116px" />
-          <p style="font-size: 14px; margin-top: 5px; color: #8e96a9">
-            请用手机扫描二维码下载
-          </p>
-        </div> -->
-        <a
-          href="https://vapp.tmuyun.com/client/download.html?tenant_id=29"
-          target="_blank"
-          ><button
-            style="
-              height: 40px;
-              border-radius: 10px;
-              border: none;
-              background-color: lightseagreen;
-              padding: 0 8px;
-            "
-          >
-            点击获取最新版本
-          </button></a
-        >
-        <!-- 这里可以添加用户协议的详细内容 -->
-      </section>
+        <div class="top-right-container">
+          <img src="./index.jpg" alt="" />
+        </div>
+      </div>
 
       <!-- 版权所有者、网站备案信息、联系方式等 -->
       <footer>
